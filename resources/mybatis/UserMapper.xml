@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhiyou100.dao.UserDao">
+
+	<insert id="saveUser" parameterType="com.zhiyou100.model.User" useGeneratedKeys="true" keyProperty="id">
+		
+		insert into user(phone) values(#{phone})
+	</insert>
+	
+	<select id="listUser" resultType="com.zhiyou100.model.User">
+		
+		select id, phone, current from user 
+		
+		<if test="sort == 'asc' ">
+			
+			order by current ASC
+		</if>
+		<if test="sort == 'desc' ">
+			
+			order by current DESC
+		</if>
+		limit #{beginNum}, #{count}
+	</select>
+	
+	<select id="getRecordCount" resultType="int">
+		
+		select count(*) from user
+	</select>
+</mapper>

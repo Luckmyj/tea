@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+   
+   
+       
+    <!-- 识别Spring MVC 相关的注解 如 @RequestMapping-->
+    <context:component-scan base-package="com.zhiyou100.controller"/>
+   
+    <!-- 使用默认的handle mapping , handle Adapt 和查询reuest 和对应的controller -->
+    <mvc:annotation-driven/>
+
+       
+    <!-- 使用默认的handler ， 支持静态资源的访问 -->
+    <mvc:default-servlet-handler/>
+    
+    <!-- 添加过滤器，需要登录的时候弹出登录框 -->
+	<mvc:interceptors>
+
+		<mvc:interceptor>
+
+			<mvc:mapping path="/tea/update" />
+			<bean class="com.zhiyou100.filter.LoginFilter"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+    
+   
+</beans>

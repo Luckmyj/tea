@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhiyou100.dao.TeaDao">
+
+	<insert id="saveTea" parameterType="com.zhiyou100.model.TeaMessage" useGeneratedKeys="true" keyProperty="id">
+		
+		insert into tea_message(shape,colour,neatness,fragrance,liquor_color,taste,infused_leaf,grading,grade_value) 
+		values(#{shape},#{colour},#{neatness},#{fragrance},#{liquorColor}, #{taste}, #{infusedLeaf}, #{grading}, #{gradeValue})
+	</insert>
+	
+	<select id="getRecordCount" resultType="int">
+		
+		select count(id) from tea_message 
+	</select>
+	
+	<select id="listTeaByPage" resultType="com.zhiyou100.model.TeaMessage" parameterType="com.zhiyou100.vo.ViewVo">
+		
+		select id, shape, colour, neatness, fragrance,liquor_color, 
+		taste, infused_leaf, grading, current from tea_message 
+		<if test="accord == 'grade_value' and sort == 'asc' ">
+			
+			order by grade_value ASC
+		</if>
+		<if test="accord == 'grade_value' and sort == 'desc' ">
+			
+			order by grade_value DESC
+		</if>
+		<if test="accord == 'current' and sort == 'asc' ">
+			
+			order by current ASC
+		</if>
+		<if test="accord == 'current' and sort == 'desc' ">
+			
+			order by current DESC
+		</if>
+		limit #{beginNum}, #{count}
+	</select>
+	
+	<select id="getCountByGrading" resultType="int">
+		
+		select count(*) from tea_message where grading = #{grade}
+	</select>
+	
+</mapper>
