@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>茶叶管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">茶叶品级管理系统</a>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">添加</a></li>
+                <li><a href="statistics.html">统计</a></li>
+                <li class="active"><a href="vote.html">投票</a></li>
+                <li><a href="score.html">作业要求</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">群众最喜欢的茶叶</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+                                    <img src="img/ahhc.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/ajbc.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/axtgy.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/hsmf.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/jsyz.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/lagp.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/lsywc.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/mlhc.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/mtcy.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/pec.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/wysdhp.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="background-color:burlywood; padding:10px;margin-top:5px">
+
+                                    <img src="img/xymj.gif" class="img-thumbnail">
+                                    <button class="btn btn-default" type="button" onclick="loadVote()" style="width:100%; margin-top:10px;">投票(10000)</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">排行榜 2017-09-30 09:00:00</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <!-- 图表要绘制到这里，设定宽度和高度 -->
+                        <div id="chart1" style="height:370px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="loginModalLabel">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="请输入手机号">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">登录</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- 图表 js 库 -->
+    <script src="js/echarts.min.js"></script>
+
+    <script type="text/javascript">
+        // 设置图表为全局变量
+        var chart1 = null;
+
+        $(document).ready(function () {
+
+            // 基于准备好的 dom，初始化echarts实例，并设置全局变量 chart1
+            chart1 = echarts.init(document.getElementById('chart1'));
+
+            // 加载完毕页面就加载排行榜
+            loadRank();
+
+            // 然后每两秒更新一次排行榜，自己修改为 30 s
+            setInterval('loadRank()', 2000);
+        })
+
+        // 投票
+        function loadVote() {
+            $('#loginModal').modal();
+        }
+
+        // 获取排行榜
+        function loadRank() {
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '得票数'
+                },
+                tooltip: {// 鼠标放上展示的提示信息格式
+                    trigger: 'item',
+                    formatter: "信阳毛尖 <br/>得票数 : {c}" // 设置茶叶名称
+                },
+                xAxis: {
+                    type: 'value',
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ["第8名", "第7名", "第6名", "第5名", "第4名", "第3名", "第2名", "第1名"]
+                },
+                series: [{
+                    type: 'bar',//==============使用得票数填充 data
+                    data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
+                    itemStyle: {
+                        normal: {
+                            color: function (param) {
+                                var colorList = [
+                                    '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+                                    '#FE8463', '#9BCA63'
+                                ];
+                                return colorList[param.dataIndex]
+                            }
+                        }
+                    }
+                }]
+            };
+
+            // 使用指定的配置项和数据显示图表。
+            chart1.setOption(option);
+        }
+    </script>
+</body>
+
+</html>
